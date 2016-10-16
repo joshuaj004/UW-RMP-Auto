@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "UW Rate My Professor Auto-Checker",
+  "short_name": "UW RMP",
+  "description": "This extension automatically grabs ratings for all professors on a the UW myPlan course page",
+  "version": "0.0.1",
+  "content_scripts": [
+    {
+      "matches": ["*://*.myplan.uw.edu/student/myplan/inquiry*"],
+      "js": ["myscript.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
